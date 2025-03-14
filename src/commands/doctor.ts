@@ -4,7 +4,7 @@ import { Doctor } from '../screens/Doctor'
 
 const doctor: Command = {
   name: 'doctor',
-  description: 'Checks the health of your Claude Code installation',
+  description: 'Checks the health of your CBorg Code installation',
   isEnabled: true,
   isHidden: false,
   userFacingName() {

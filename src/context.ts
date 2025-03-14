@@ -19,14 +19,14 @@ import { lastX } from './utils/generators'
 import { getGitEmail } from './utils/user'
 
 /**
- * Find all KODING.md files in the current working directory
+ * Find all CBORG-CODE.md files in the current working directory
  */
 export async function getClaudeFiles(): Promise<string | null> {
   const abortController = new AbortController()
   const timeout = setTimeout(() => abortController.abort(), 3000)
   try {
     const files = await ripGrep(
-      ['--files', '--glob', join('**', '*', 'KODING.md')],
+      ['--files', '--glob', join('**', '*', 'CBORG-CODE.md')],
       getCwd(),
       abortController.signal,
     )
@@ -34,8 +34,8 @@ export async function getClaudeFiles(): Promise<string | null> {
       return null
     }
 
-    // Add instructions for additional KODING.md files
-    return `NOTE: Additional KODING.md files were found. When working in these directories, make sure to read and follow the instructions in the corresponding KODING.md file:\n${files
+    // Add instructions for additional CBORG-CODE.md files
+    return `NOTE: Additional CBORG-CODE.md files were found. When working in these directories, make sure to read and follow the instructions in the corresponding CBORG-CODE.md file:\n${files
       .map(_ => path.join(getCwd(), _))
       .map(_ => `- ${_}`)
       .join('\n')}`

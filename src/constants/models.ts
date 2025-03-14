@@ -1,21 +1,34 @@
 export default {
-  "openai": [
+  "cborg": [
       {
-          "model": "gpt-4",
-          "max_tokens": 4096,
-          "max_input_tokens": 8192,
-          "max_output_tokens": 4096,
-          "input_cost_per_token": 0.00003,
-          "output_cost_per_token": 0.00006,
-          "provider": "openai",
+          "model": "lbl/llama",
+          "max_tokens": 8192,
+          "max_input_tokens": 128000,
+          "max_output_tokens": 8192,
+          "input_cost_per_token": 0,
+          "output_cost_per_token": 0,
+          "provider": "lbl",
           "mode": "chat",
           "supports_function_calling": true,
-          "supports_prompt_caching": true,
-          "supports_system_messages": true,
+          "supports_response_schema": true,
           "supports_tool_choice": true
       },
       {
-          "model": "gpt-4o",
+        "model": "lbl/qwen-coder",
+        "max_tokens": 8000,
+        "max_input_tokens": 32768,
+        "max_output_tokens": 8000,
+        "input_cost_per_token": 0,
+        "output_cost_per_token": 0,
+        "provider": "lbl",
+        "mode": "chat",
+        "supports_function_calling": true,
+        "supports_response_schema": true,
+        "supports_tool_choice": true
+      },
+
+      {
+          "model": "openai/gpt-4o",
           "max_tokens": 16384,
           "max_input_tokens": 128000,
           "max_output_tokens": 16384,
@@ -34,8 +47,9 @@ export default {
           "supports_system_messages": true,
           "supports_tool_choice": true
       },
+      /* currently not available
       {
-          "model": "gpt-4.5-preview",
+          "model": "openai/gpt-4.5-preview",
           "max_tokens": 16384,
           "max_input_tokens": 128000,
           "max_output_tokens": 16384,
@@ -54,6 +68,8 @@ export default {
           "supports_system_messages": true,
           "supports_tool_choice": true
       },
+      */
+     /*
       {
           "model": "gpt-4.5-preview-2025-02-27",
           "max_tokens": 16384,
@@ -74,8 +90,9 @@ export default {
           "supports_system_messages": true,
           "supports_tool_choice": true
       },
+      */
       {
-          "model": "gpt-4o-mini",
+          "model": "openai/gpt-4o-mini",
           "max_tokens": 16384,
           "max_input_tokens": 128000,
           "max_output_tokens": 16384,
@@ -94,6 +111,7 @@ export default {
           "supports_system_messages": true,
           "supports_tool_choice": true
       },
+      /*
       {
           "model": "gpt-4o-mini-2024-07-18",
           "max_tokens": 16384,
@@ -114,8 +132,9 @@ export default {
           "supports_system_messages": true,
           "supports_tool_choice": true
       },
+      */
       {
-          "model": "o1",
+          "model": "openai/o1",
           "max_tokens": 100000,
           "max_input_tokens": 200000,
           "max_output_tokens": 100000,
@@ -134,7 +153,7 @@ export default {
           "supports_reasoning_effort": true
       },
       {
-          "model": "o3-mini",
+          "model": "openai/o3-mini",
           "max_tokens": 100000,
           "max_input_tokens": 200000,
           "max_output_tokens": 100000,
@@ -151,6 +170,7 @@ export default {
           "supports_tool_choice": true,
           "supports_reasoning_effort": true
       },
+      /*
       {
           "model": "o3-mini-2025-01-31",
           "max_tokens": 100000,
@@ -188,8 +208,9 @@ export default {
           "supports_tool_choice": true,
           "supports_reasoning_effort": true
       },
+      */
       {
-          "model": "chatgpt-4o-latest",
+          "model": "openai/chatgpt:latest",
           "max_tokens": 4096,
           "max_input_tokens": 128000,
           "max_output_tokens": 4096,
@@ -204,6 +225,7 @@ export default {
           "supports_system_messages": true,
           "supports_tool_choice": true
       },
+      /*
       {
           "model": "gpt-4o-2024-05-13",
           "max_tokens": 4096,
@@ -278,6 +300,8 @@ export default {
           "supports_system_messages": true,
           "supports_tool_choice": true
       },
+      */
+     /*
   ],
   "mistral": [
       {
@@ -347,8 +371,9 @@ export default {
       }
   ],
   "deepseek": [
+  */
       {
-          "model": "deepseek-reasoner",
+          "model": "azure/deepseek-r1",
           "max_tokens": 8192,
           "max_input_tokens": 65536,
           "max_output_tokens": 8192,
@@ -362,6 +387,7 @@ export default {
           "supports_tool_choice": true,
           "supports_prompt_caching": true
       },
+      /*
       {
           "model": "deepseek-chat",
           "max_tokens": 8192,
@@ -411,19 +437,9 @@ export default {
       },
   ],
   "groq": [
-      {
-          "model": "llama-3.3-70b-versatile",
-          "max_tokens": 8192,
-          "max_input_tokens": 128000,
-          "max_output_tokens": 8192,
-          "input_cost_per_token": 5.9e-7,
-          "output_cost_per_token": 7.9e-7,
-          "provider": "groq",
-          "mode": "chat",
-          "supports_function_calling": true,
-          "supports_response_schema": true,
-          "supports_tool_choice": true
-      },
+  */
+
+      /*
       {
           "model": "llama2-70b-4096",
           "max_tokens": 4096,
@@ -621,8 +637,9 @@ export default {
       }
   ],
   "anthropic": [
+  */
       {
-          "model": "claude-3-5-haiku-latest",
+          "model": "anthropic/claude-haiku",
           "max_tokens": 8192,
           "max_input_tokens": 200000,
           "max_output_tokens": 8192,
@@ -641,6 +658,7 @@ export default {
           "deprecation_date": "2025-10-01",
           "supports_tool_choice": true
       },
+      /*
       {
           "model": "claude-3-opus-latest",
           "max_tokens": 4096,
@@ -661,8 +679,9 @@ export default {
           "deprecation_date": "2025-03-01",
           "supports_tool_choice": true
       },
+      */
       {
-          "model": "claude-3-7-sonnet-latest",
+          "model": "anthropic/claude-sonnet",
           "max_tokens": 8192,
           "max_input_tokens": 200000,
           "max_output_tokens": 8192,
@@ -681,10 +700,12 @@ export default {
           "deprecation_date": "2025-06-01",
           "supports_tool_choice": true
       },
+/*
   ],
   "gemini": [
+  */
       {
-          "model": "gemini-2.0-flash",
+          "model": "google/gemini-flash",
           "max_tokens": 8192,
           "max_input_tokens": 1048576,
           "max_output_tokens": 8192,
@@ -710,7 +731,7 @@ export default {
           "source": "https://ai.google.dev/pricing#2_0flash"
       },
       {
-          "model": "gemini-2.0-flash-lite",
+          "model": "google/gemini-flash-lite",
           "max_tokens": 8192,
           "max_input_tokens": 1048576,
           "max_output_tokens": 8192,
@@ -734,7 +755,7 @@ export default {
           "supports_audio_output": false,
           "supports_tool_choice": true,
           "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-2.0-flash-lite"
-      },
+      } /*,
       {
           "model": "gemini-2.0-flash-thinking-exp",
           "max_tokens": 8192,
@@ -776,14 +797,15 @@ export default {
   "ollama": [
 
   ]
+  */
+    ]
 }
 
-
 export const providers = {
-  "openai": {
-    "name": "OpenAI",
-    "baseURL": "https://api.openai.com/v1"
-  },
+  "cborg": {
+    "name": "CBorg",
+    "baseURL": "https://api.cborg.lbl.gov/v1"
+  } /*,
   "openrouter": {
     "name": "OpenRouter",
     "baseURL": "https://openrouter.ai/api/v1"
@@ -817,4 +839,5 @@ export const providers = {
     "name": "Groq",
     "baseURL": "https://api.groq.com/openai/v1"
   }
+  */
 }

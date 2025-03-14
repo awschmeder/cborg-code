@@ -238,7 +238,7 @@ export const FileEditTool = {
     readFileTimestamps[fullFilePath] = statSync(fullFilePath).mtimeMs
 
     // Log when editing CLAUDE.md
-    if (fullFilePath.endsWith(`${sep}KODING.md`)) {
+    if (fullFilePath.endsWith(`${sep}CBORG-CODE.md`)) {
       logEvent('tengu_write_claudemd', {})
     }
 

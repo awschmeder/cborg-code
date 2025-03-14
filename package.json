@@ -1,23 +1,23 @@
 {
-  "name": "anon-kode",
+  "name": "cborg-code",
   "version": "0.0.33",
   "bin": {
-    "kode": "cli.mjs"
+    "cborg-code": "cli.mjs"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "type": "module",
-  "author": "Anon Kode <anon@kode.com>",
+  "author": "CBorg Code",
   "license": "",
-  "description": "Use Anon Kode, Anon's AI assistant, right from your terminal. Anon Kode can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
-  "homepage": "https://github.com/dnakov/anon-kode",
+  "description": "Use CBorg Code AI programming assistant, right from your terminal. CBorg Code can understand your codebase, edit files, run terminal commands, and handle entire workflows for you.",
+  "homepage": "https://github.com/lbnl-science-it/cborg-code",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dnakov/anon-kode.git"
+    "url": "https://github.com/lbnl-science-it/cborg-code.git"
   },
   "bugs": {
-    "url": "https://github.com/dnakov/anon-kode/issues"
+    "url": "https://github.com/lbnl-science-it/cborg-code/issues"
   },
   "files": [
     "cli.mjs",
@@ -77,5 +77,11 @@
   "devDependencies": {
     "react-devtools-core": "^6.1.1",
     "tsx": "^4.19.3"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "@anthropic-ai/claude-code",
+      "esbuild"
+    ]
   }
 }

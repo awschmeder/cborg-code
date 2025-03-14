@@ -50,7 +50,7 @@ function getContextSections(text: string): Section[] {
 
     const [, name = 'Unnamed Section', content = ''] = match
     sections.push({
-      title: name === 'codeStyle' ? "CodeStyle + KODING.md's" : name,
+      title: name === 'codeStyle' ? "CodeStyle + CBORG-CODE.md's" : name,
       content: content.trim(),
     })
 

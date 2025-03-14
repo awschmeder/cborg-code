@@ -1,8 +1,6 @@
-# ANON KODE
+# CBorg Code
 
-
-https://github.com/user-attachments/assets/7a9253a7-8bb0-40d5-a3f3-5e6096d7c789
-
+This is a forked version of Anon Kode, forked from Claude Code. CBorg Code works with the CBorg AI Portal and is for internal use only at Berkeley Lab.
 
 Terminal-based AI coding tool that can use any model that supports the OpenAI-style API.
 
@@ -11,40 +9,76 @@ Terminal-based AI coding tool that can use any model that supports the OpenAI-st
 - Runs tests, shell commands and stuff
 - Whatever else claude-code can do, depending on the model you use
 
-## HOW TO USE
+## How to Install
+
+This is a pre-release development tool. Build Requirements: npm, pnpm, and bun.
+
+Environment variables: Set CBORG_API_KEY, PNPM_HOME, and add PNPM_HOME to your path:
 
 ```
-npm install -g anon-kode
-cd your-project
-kode
+export CBORG_API_KEY="sk-..."
+export PNPM_HOME=~/bin
+export PATH=$PNPM_HOME:$PATH
 ```
 
-You can use the onboarding to set up the model, or `/model`.
-If you don't see the models you want on the list, you can manually set them in `/config`
-As long as you have an openai-like endpoint, it should work.
-
-## HOW TO DEV
+Clone repo, build and link the binary:
 
 ```
-pnpm i
-pnpm run dev
+pnpm install
 pnpm run build
+PNPM_HOME=~/bin pnpm link --global
+
+cd your-project
+cborg-code
 ```
 
-Get some more logs while debugging:
+## Staying Up-to-Date
+
+This project is experimental. To stay up-to-date be sure to `git pull` from the repo frequently and rebuild with `pnpm run build`.
+
+## 1st Time Setup
+
+Type `/model` to select the module.
+
+*NOTE:* The API key will be auto-populated from your environment - you don't need to set it.
+
+*IMPORTANT*: Make sure to select a model that shows "tools" after the name, otherwise it will not work.
+
+If budget is not a concern:
+  Setup the "Large model Only" to anthropic/claude-sonnet
+  Setup the "Small model Only" to anthropic/claude-haiku
+
+Lower Cost Alternative:
+  Setup "Both" models to google/gemini-flash
+
+Alternative (no cost and data retained in LBL network):
+  Use lbl/qwen-coder for both models. (CURRENTLY NOT WORKING - PLEASE CHECK HERE FOR UPDATES)
+
+
+## Development Use
+
+To run the binary with extra logs:
 ```
 NODE_ENV=development pnpm run dev --verbose --debug
 ```
 
-## BUGS
+## Status
+
+- Cost calculations do not seem to work
+- Occasional tool use errors occur
+
+## Bug Reports
 
 You can submit a bug from within the app with `/bug`, it will open a browser to github issue create with stuff filed out.
 
+You can email (Science IT Consulting)[scienceit@lbl.gov] with questions and to request help.
+
 ## Warning
 
-Use at own risk.
+Use at your own risk. Backup your code and use version control to prevent unintended consequences.
+
+## Data and Privacy 
+
+For more information go to the (Cborg Website)[https://cborg.lbl.gov].
 
 
-## YOUR DATA
-
-- There's no telemetry or backend servers other than the AI providers you choose

@@ -11,7 +11,7 @@ export const getCodeStyle = memoize((): string => {
   let currentDir = getCwd()
 
   while (currentDir !== parse(currentDir).root) {
-    const stylePath = join(currentDir, 'KODING.md')
+    const stylePath = join(currentDir, 'CBORG-CODE.md')
     if (existsSync(stylePath)) {
       styles.push(
         `Contents of ${stylePath}:\n\n${readFileSync(stylePath, 'utf-8')}`,

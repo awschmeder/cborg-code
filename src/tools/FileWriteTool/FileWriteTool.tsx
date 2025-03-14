@@ -212,7 +212,7 @@ export const FileWriteTool = {
     readFileTimestamps[fullFilePath] = statSync(fullFilePath).mtimeMs
 
     // Log when writing to CLAUDE.md
-    if (fullFilePath.endsWith(`${sep}KODING.md`)) {
+    if (fullFilePath.endsWith(`${sep}CBORG-CODE.md`)) {
       logEvent('tengu_write_claudemd', {})
     }
 
