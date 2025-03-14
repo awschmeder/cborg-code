@@ -25,6 +25,7 @@ export PATH=$PNPM_HOME:$PATH
 Clone repo, build and link the binary:
 
 ```
+curl -fsSL https://bun.sh/install | bash # install bun if you don't have it
 pnpm install
 pnpm run build
 PNPM_HOME=~/bin pnpm link --global
