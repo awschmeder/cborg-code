@@ -4,10 +4,11 @@ This is a forked version of Anon Kode, forked from Claude Code. CBorg Code works
 
 Terminal-based AI coding tool that can use any model that supports the OpenAI-style API.
 
-- Fixes your spaghetti code
-- Explains wtf that function does
-- Runs tests, shell commands and stuff
+- Fixes code
+- Explains codes
+- Runs tests, shell commands including git operations
 - Whatever else claude-code can do, depending on the model you use
+- It is experimental and might break
 
 ## How to Install
 
