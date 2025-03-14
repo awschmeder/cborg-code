@@ -46,14 +46,17 @@ Type `/model` to select the module.
 *IMPORTANT*: Make sure to select a model that shows "tools" after the name, otherwise it will not work.
 
 If budget is not a concern:
-  Setup the "Large model Only" to anthropic/claude-sonnet
-  Setup the "Small model Only" to anthropic/claude-haiku
+
+* Setup the "Large model Only" to anthropic/claude-sonnet
+*  Setup the "Small model Only" to anthropic/claude-haiku
 
 Lower Cost Alternative:
-  Setup "Both" models to google/gemini-flash
+
+* Setup "Both" models to google/gemini-flash
 
 Alternative (no cost and data retained in LBL network):
-  Use lbl/qwen-coder for both models. (CURRENTLY NOT WORKING - PLEASE CHECK HERE FOR UPDATES)
+
+* Use lbl/qwen-coder for both models. (CURRENTLY NOT WORKING - PLEASE CHECK HERE FOR UPDATES)
 
 
 ## Development Use
@@ -72,7 +75,7 @@ NODE_ENV=development pnpm run dev --verbose --debug
 
 You can submit a bug from within the app with `/bug`, it will open a browser to github issue create with stuff filed out.
 
-You can email (Science IT Consulting)[scienceit@lbl.gov] with questions and to request help.
+You can email [Science IT Consulting](scienceit@lbl.gov) with questions and to request help.
 
 ## Warning
 
@@ -80,6 +83,6 @@ Use at your own risk. Backup your code and use version control to prevent uninte
 
 ## Data and Privacy 
 
-For more information go to the (Cborg Website)[https://cborg.lbl.gov].
+For more information go to the [Cborg Website](https://cborg.lbl.gov).
 
 
